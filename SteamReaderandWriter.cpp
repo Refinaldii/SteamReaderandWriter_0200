@@ -5,25 +5,33 @@ using namespace std;
 
 int main()
 {
-	int main()
-	{
-		string baris;
+	string baris;
 
-		// membuka file dalam mmode menulis
-		ofstream outfile;
-		//menunjuk ke sebuah nama file
-		outfile.open("contohfile.txt");
-		cout << ">= Menulis file, \'q\' untuk keluar" << endl;
+	// membuka file dalam mmode menulis
+	ofstream outfile;
+	//menunjuk ke sebuah nama file
+	outfile.open("contohfile.txt");
 
-		///unlimited loop untuk menulis
-		while (true) {
-			cout << "- ";
-			//mendapatkan setiap karakter dalam satu baris
-			getline(cin, baris);
-			//loop akan berhenti jika anda memasukkan karakter q
-			if (baris == "q") break;
-			//menulis dan memasukkan niai dari 'baris' ke dalam file
-			outfile << baris << endl;
-		}
-	};
+	cout << ">= Menulis file, \'q\' untuk keluar" << endl;
+
+	///unlimited loop untuk menulis
+	while (true) {
+		cout << "- ";
+		//mendapatkan setiap karakter dalam satu baris
+		getline(cin, baris);
+		//loop akan berhenti jika anda memasukkan karakter q
+		if (baris == "q") break;
+		//menulis dan memasukkan niai dari 'baris' ke dalam file
+		outfile << baris << endl;
+	}
+	// selesai dalam menulis sekarang tutup file nya
+	outfile.close();
+
+	//Membuka file dalam mode baca
+	ifstream infile;
+	//menujuk ke sebuah file
+	infile.open("contohfile.txt");
+
+	
+}
 
