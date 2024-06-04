@@ -10,5 +10,12 @@ int main()
 
     cout << "Masukan nama file : ";
     cin >> NamaFile;
+
+    /// membuka file dalam mode menulis
+    ofstream outfile;
+    //menunjuk kesebuah nama file
+    outfile.open(NamaFile + ".txt", ios::out);
+
+    cout << ">= Menulis file, \'q\' untuk keluar" << endl;
 }
 
