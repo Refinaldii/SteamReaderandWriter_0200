@@ -40,6 +40,8 @@ int main()
 			//dan tampilkan disini
 			cout << baris << '\n';
 		}
+		//tutp file tersebut setelah selesai
+		infile.close();
 	}
 }
 
